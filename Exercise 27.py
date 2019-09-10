@@ -12,7 +12,6 @@ def fila(lis, n):
     return s
 
 
-
 def mostrar_tablero(lis):
     print(tapas())
     print(fila(lis, 0))
@@ -32,15 +31,15 @@ def main():
         turno = (x % 2) + 1
         valido = False
         while not valido:
-            f = int(input("En que fila quiere colocar ficha"))
-            c = int(input("En que columna quiere colocar ficha"))
+            f = int(input("En que fila quiere colocar ficha")) % 3
+            c = int(input("En que columna quiere colocar ficha")) % 3
             if game[f][c] == 0:
                 game[int(f)][int(c)] = turno
                 valido = True
             else:
+                print("Esa casilla ya está ocupada")
 
         mostrar_tablero(game)
-
 
 
 main()

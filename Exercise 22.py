@@ -8,7 +8,7 @@ def main():
         all_text = open_file.read()
         lis = all_text.split()
         print(lis)
-        while (len(lis)> 0):
+        while len(lis) > 0:
             elem = lis[0]
             new_lis = remove_elem(lis, elem)
             count_new = len(lis) - len(new_lis)
